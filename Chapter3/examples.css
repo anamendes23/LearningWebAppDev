@@ -1,0 +1,89 @@
+/*Inheritance*/
+body  {
+  background: yellow;
+  /*not inherited by descendants*/
+  margin: 0;
+  padding: 0;
+}
+/* block-style elements are not inherited*/
+/*Since h1 is a descendant of the body tag
+it will have a yellow backgroung. */
+h1 {
+  background: black;
+  color: white;
+}
+/*p is also a descendant of body, but
+we'll override the background so it's
+not yellow */
+p {
+  background: green;
+}
+/*Since we have only p with "first" class, we can call only the class name*/
+.first {
+  color: red;
+  margin: 10px;
+  padding: 20px;
+}
+/*Pseudoclasses*/
+a {
+  color: cornflowerblue;
+  text-decoration: none; /*remove the default underline*/
+}
+
+a:visited {
+  color: tomato;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/*More complex selectors*/
+ol {
+  border: 5px solid darksalmon;
+  border-radius: 10px;
+}
+
+ol li {
+  color: brown;
+}
+
+/*from a class
+.content li {
+  color: brown;
+} */
+
+/*just the first line is yellow */
+li:first-child {
+  background: yellow;
+}
+/*select the nth element */
+li:nth-child(2) {
+  background: orange;
+}
+
+main {
+  width: 500px;
+  margin: auto;
+  background: gray;
+  overflow: auto;
+}
+
+nav {
+  /*uncomment the next line to get a border around the nav*/
+  /*border: 3px solid black;*/
+  width: 200px;
+  float: right;
+}
+
+/*remove defaults on the p elements inside the nav*/
+nav p {
+  margin: 0;
+  padding: 0;
+}
+
+p.content {
+  margin: 0; /*zero out the default margin*/
+  float: left;
+  padding: 10px;
+  width: 380px; /*400 - 2*10 = 380*/
+}
